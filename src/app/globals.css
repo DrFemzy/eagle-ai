@@ -4,7 +4,18 @@
 
 :root {
   --background: #000614;
-  --foreground: #FFFFFF;
+  --foreground: #ffffff;
+  --pryLinearGradient: linear-gradient(115deg, #1870f6 62.27%, #32fefe 95.1%);
+}
+
+.textGradientNeonBlue {
+  background: var(
+    --gradient-neon-blue,
+    linear-gradient(132deg, #0207f7 0%, #14ffff 68.66%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body {
