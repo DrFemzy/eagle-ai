@@ -24,6 +24,7 @@ export default {
       backgroundImage: {
         pryLinearGradient: "var(--pryLinearGradient)",
         heroBg: "url(/pngs/heroBg.png)",
+        mobileHeroBg: "url(/pngs/mobileHeroBg.png)",
       },
       aspectRatio: {
         "4/3": "4 / 3",

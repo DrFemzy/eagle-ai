@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Brand from "./brand";
 import Link from "next/link";
 import PryBtn from "./pryBtn";
@@ -10,6 +10,18 @@ import { X } from "lucide-react";
 
 function Header() {
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    window.onscroll = function () {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+  }, []);
+
   const navItems = [
     {
       name: "Products",
@@ -47,7 +59,12 @@ function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full px-[19.375rem] 3xl:px-10 sm:px-5 py-[1.625rem] bg-[#131B2F] z-10">
+    <header
+      className={cn(
+        "fixed top-0 w-full px-[19.375rem] 3xl:px-10 sm:px-5 py-[1.625rem] bg-[#131B2F] md:bg-transparent z-10 transition-all duration-200",
+        scrolled && "md:bg-[#131B2F]"
+      )}
+    >
       <nav className="relative flex justify-between items-center 3xl:justify-center 3xl:gap-10 xl:justify-between">
         <Brand />
 

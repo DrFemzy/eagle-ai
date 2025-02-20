@@ -12,7 +12,7 @@ export default function Home() {
       <Header />
       <main className="">
         {/* Hero Section */}
-        <section className="flex flex-col pt-24 xl:pt-20 bg-heroBg bg-no-repeat bg-cover">
+        <section className="flex flex-col pt-24 xl:pt-20 bg-heroBg md:bg-mobileHeroBg bg-no-repeat bg-cover md:bg-contain">
           {/* banner */}
           <div className="py-[1.875rem] px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5">
             <div className="flex py-[0.625rem] px-[0.94rem] rounded-[0.75rem] bg-eagleHighlight">
