@@ -145,6 +145,66 @@ export default function Home() {
             />
           </div>
         </section>
+
+        {/* Waitlist Section */}
+        <section className="px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5 pt-[3.75rem] pb-20 md:pt-0 flex flex-col gap-[1.875rem]">
+          <h3 className="text-[3rem] text-[#E3E8F3]">
+            Limited Availability - Register now to join wait List
+          </h3>
+
+          <div className="grid grid-cols-[1.5fr_1fr] gap-[1.875rem]">
+            {/* Info */}
+            <div className="flex flex-col gap-[1.875rem]">
+              <div className="flex items-start gap-[0.94rem] p-5 rounded-[0.625rem] border border-white/20 bg-white/10">
+                <div className="relative aspect-square w-[6.25rem]">
+                  <ContainImage src="/pngs/key.png" alt="Key Point" />
+                </div>
+
+                <div className="flex flex-col gap-5">
+                  <h4 className="text-[1.5rem]">Limited Access Available</h4>
+                  <div
+                    className={`${openSans.className} text-[1rem] text-[#8CA0B3] flex flex-col gap-4 `}
+                  >
+                    <p>
+                      Be among the first to access institutional-grade crypto
+                      investment opportunities. Our exclusive waitlist is now
+                      open for:
+                    </p>
+
+                    <ul className="list-disc pl-5">
+                      <li>Early Community Members</li>
+                      <li>Active $EAI Holders</li>
+                    </ul>
+                    <p>🔒 Waitlist Closes: January 31, 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start gap-[0.94rem] p-5 rounded-[0.625rem] border border-white/20 bg-white/10">
+                <div className="relative aspect-square w-[6.25rem]">
+                  <ContainImage src="/pngs/benefits.png" alt="Benefit Point" />
+                </div>
+
+                <div className="flex flex-col gap-5">
+                  <h4 className="text-[1.5rem]">
+                    Benefits of signing up early
+                  </h4>
+                  <div
+                    className={`${openSans.className} text-[1rem] text-[#8CA0B3] flex flex-col gap-4 `}
+                  >
+                    <ul className="list-disc pl-5">
+                      <li>Priority access when the fund launches</li>
+                      <li>Early information about TradeDividends</li>
+                      <li>
+                        Exclusive insights from our institutional trading team
+                      </li>
+                      <li>Special allocation opportunities</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </div>
