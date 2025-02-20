@@ -1,10 +1,15 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Brand from "./brand";
 import Link from "next/link";
 import PryBtn from "./pryBtn";
 import { cn } from "@/utils/cn";
+import { ContainImage } from "./myImage";
+import { X } from "lucide-react";
 
 function Header() {
+  const [openSidebar, setOpenSidebar] = useState(false);
   const navItems = [
     {
       name: "Products",
@@ -37,18 +42,23 @@ function Header() {
     },
   ];
 
+  const toggleSidebar = () => {
+    setOpenSidebar(!openSidebar);
+  };
+
   return (
-    <header className="fixed top-0 w-full px-[19.375rem] py-[1.625rem] bg-[#131B2F]">
-      <nav className="flex justify-between items-center">
+    <header className="fixed top-0 w-full px-[19.375rem] 3xl:px-10 py-[1.625rem] bg-[#131B2F]">
+      <nav className="relative flex justify-between items-center 3xl:justify-center 3xl:gap-10 xl:justify-between">
         <Brand />
 
-        <ul className="flex gap-10 items-center">
+        {/* Nav Items */}
+        <ul className="flex gap-10 3xl:gap-6 xl:hidden items-center">
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
                 href={item.href}
                 className={cn(
-                  "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base font-semibold leading-normal",
+                  "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base 3xl:text-sm font-semibold 3xl:font-medium leading-normal",
                   item.important && "text-[#E3E8F3]"
                 )}
               >
@@ -59,9 +69,49 @@ function Header() {
         </ul>
 
         {/* Nav Button */}
-        <PryBtn text="Launch App" />
+        <div className="xl:hidden">
+          <PryBtn text="Launch App" />
+        </div>
 
-        {/* Nav Items */}
+        <div
+          onClick={toggleSidebar}
+          className="hidden xl:block relative aspect-square w-[2rem]"
+        >
+          <ContainImage src="/svgs/menu.svg" alt="Menu" />
+        </div>
+
+        <div
+          onClick={toggleSidebar}
+          className={cn(
+            "fixed top-0 left-0 bottom-0 w-full bg-background backdrop-blur-[20px] transition-all duration-200 translate-x-[-100%] flex flex-col gap-10 z-50 px-8 py-5",
+            openSidebar && "translate-x-0"
+          )}
+        >
+          <div className="flex items-center justify-between gap-10">
+
+          <Brand />
+
+          <X className="text-[#14ffff]" />
+          </div>
+
+          {/* Nav Items */}
+          <ul className="flex flex-col gap-10 3xl:gap-6">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                <Link
+                  href={item.href}
+                  className={cn(
+                    "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base 3xl:text-sm font-semibold 3xl:font-medium leading-normal",
+                    item.important && "text-[#E3E8F3]"
+                  )}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+            <PryBtn text="Launch App" />
+          </ul>
+        </div>
       </nav>
     </header>
   );
