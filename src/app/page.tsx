@@ -1,5 +1,6 @@
 "use client";
 
+import Brand from "@/components/brand";
 import Header from "@/components/header";
 import { ContainImage, CoverImage } from "@/components/myImage";
 import PryBtn from "@/components/pryBtn";
@@ -211,8 +212,29 @@ export default function Home() {
             <WaitlistForm />
           </div>
         </section>
+
+        {/* Coming soon section */}
+        <section className="px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5 pt-20 pb-[7.5rem] md:pb-[5rem] md:pt-[3.75rem] sm:mx-5 mb-[1.88rem] flex flex-col gap-[0.94rem] bg-pryLinearGradient">
+          <h1 className="text-[4.5rem] md:text-[3rem] sm:text-[2.25rem]">Coming Q1 2025</h1>
+          <ul className="list-disc pl-8 text-[1.125rem]">
+            <li>Full fund details and officer announcements</li>
+            <li>TradeDividends program specifics</li>
+            <li>Institutional partnership roadmap</li>
+            <li>Regulatory framework overview</li>
+          </ul>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
+      <footer className="flex justify-between items-center sm:flex-col gap-4 py-[1.88rem] mx-[19.375rem] 3xl:mx-[15rem] 2xl:mx-[10rem] xl:mx-10 sm:mx-5 border-t border-white/20 ">
+        <Brand showTextLogo />
+
+        <p className="text-[1rem] text-[#8CA0B3] text-center">
+          Copyright © {new Date().getFullYear()} Eagle AI
+        </p>
+
+        <div className="relative w-[10rem] h-8">
+          <ContainImage src="/pngs/socials.png" alt="Social Icons" />
+        </div>
+      </footer>
     </div>
   );
 }
