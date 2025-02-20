@@ -3,6 +3,8 @@
 import Header from "@/components/header";
 import { ContainImage, CoverImage } from "@/components/myImage";
 import PryBtn from "@/components/pryBtn";
+import TextInput from "@/components/textInput";
+import WaitlistForm from "@/components/waitlistForm";
 import { openSans } from "@/fonts";
 import Image from "next/image";
 import Link from "next/link";
@@ -147,21 +149,23 @@ export default function Home() {
         </section>
 
         {/* Waitlist Section */}
-        <section className="px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5 pt-[3.75rem] pb-20 md:pt-0 flex flex-col gap-[1.875rem]">
-          <h3 className="text-[3rem] text-[#E3E8F3]">
+        <section className="px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5 pt-[3.75rem] pb-20 md:pt-0 flex flex-col gap-[1.875rem] ">
+          <h3 className="text-[3rem] md:text-[2.25rem] text-[#E3E8F3]">
             Limited Availability - Register now to join wait List
           </h3>
 
-          <div className="grid grid-cols-[1.5fr_1fr] gap-[1.875rem]">
+          <div className="grid grid-cols-[1.5fr_1fr] gap-[1.875rem] md:grid-cols-1 md:gap-20">
             {/* Info */}
             <div className="flex flex-col gap-[1.875rem]">
-              <div className="flex items-start gap-[0.94rem] p-5 rounded-[0.625rem] border border-white/20 bg-white/10">
-                <div className="relative aspect-square w-[6.25rem]">
+              <div className="flex items-start md:flex-col md:items-center gap-[0.94rem] p-5 rounded-[0.625rem] border border-white/20 bg-white/10">
+                <div className="relative aspect-square min-w-[6.25rem] lg:min-w-[5rem] md:min-w-[4.125rem]">
                   <ContainImage src="/pngs/key.png" alt="Key Point" />
                 </div>
 
-                <div className="flex flex-col gap-5">
-                  <h4 className="text-[1.5rem]">Limited Access Available</h4>
+                <div className="flex flex-col gap-5 w-full">
+                  <h4 className="text-[1.5rem] md:text-[1.125rem] md:text-center">
+                    Limited Access Available
+                  </h4>
                   <div
                     className={`${openSans.className} text-[1rem] text-[#8CA0B3] flex flex-col gap-4 `}
                   >
@@ -179,13 +183,13 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-start gap-[0.94rem] p-5 rounded-[0.625rem] border border-white/20 bg-white/10">
-                <div className="relative aspect-square w-[6.25rem]">
+              <div className="flex items-start md:flex-col md:items-center gap-[0.94rem] p-5 rounded-[0.625rem] border border-white/20 bg-white/10">
+                <div className="relative aspect-square min-w-[6.25rem] lg:min-w-[5rem] md:min-w-[4.125rem]">
                   <ContainImage src="/pngs/benefits.png" alt="Benefit Point" />
                 </div>
 
-                <div className="flex flex-col gap-5">
-                  <h4 className="text-[1.5rem]">
+                <div className="flex flex-col gap-5 w-full">
+                  <h4 className="text-[1.5rem] md:text-[1.125rem] md:text-center">
                     Benefits of signing up early
                   </h4>
                   <div
@@ -203,6 +207,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <WaitlistForm />
           </div>
         </section>
       </main>

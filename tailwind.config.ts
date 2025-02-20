@@ -25,6 +25,7 @@ export default {
         pryLinearGradient: "var(--pryLinearGradient)",
         heroBg: "url(/pngs/heroBg.png)",
         mobileHeroBg: "url(/pngs/mobileHeroBg.png)",
+        inputBg: "rgba(255, 255, 255, 0.20)",
       },
       aspectRatio: {
         "4/3": "4 / 3",
@@ -36,7 +37,7 @@ export default {
         desktopPhone: "26.61969 / 51.09381",
         mobilePhone: "21.875 / 43.375",
         era: "21.875 / 16.95041",
-        dividends: "21.875 / 20.25"
+        dividends: "21.875 / 20.25",
       },
     },
   },
