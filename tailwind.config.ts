@@ -35,7 +35,8 @@ export default {
         textLogo: "11.837 / 1.21294",
         desktopPhone: "26.61969 / 51.09381",
         mobilePhone: "21.875 / 43.375",
-        era: "21.875 / 16.95041"
+        era: "21.875 / 16.95041",
+        dividends: "21.875 / 20.25"
       },
     },
   },

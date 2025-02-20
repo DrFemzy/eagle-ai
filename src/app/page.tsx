@@ -3,6 +3,7 @@
 import Header from "@/components/header";
 import { ContainImage, CoverImage } from "@/components/myImage";
 import PryBtn from "@/components/pryBtn";
+import { openSans } from "@/fonts";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -71,6 +72,7 @@ export default function Home() {
 
         {/* New Era section */}
         <section className="px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5 pt-[3.75rem] pb-20 md:pt-0 flex md:flex-col gap-[3.125rem] md:gap-[0.55rem] items-center">
+          {/* Image */}
           <div className="relative aspect-square w-[31.375rem] md:w-full md:aspect-era">
             <ContainImage
               src="/pngs/desktopEra.png"
@@ -81,12 +83,16 @@ export default function Home() {
 
           {/* Texts */}
           <div className="flex gap-[0.9375rem] flex-col">
-            <h2 className="text-[3rem] md:text-[2.25rem] ">A new era in crypto investment</h2>
+            <h2 className="text-[3rem] md:text-[2.25rem] ">
+              A new era in crypto investment
+            </h2>
             <p className="text-[1.125rem] ">
               Our partnership represents a milestone in institutional crypto
               adoption, featuring:
             </p>
-            <ul className="text-[#8CA0B3] text-[1rem] list-disc pl-6">
+            <ul
+              className={`${openSans.className} text-[#8CA0B3] text-[1rem] list-disc pl-6`}
+            >
               <li>
                 Exclusive licensing of Eagle AI Labs' proprietary BTC price
                 prediction algorithms
@@ -105,6 +111,38 @@ export default function Home() {
                 regulatory environment
               </li>
             </ul>
+          </div>
+        </section>
+
+        {/* New Era section */}
+        <section className="px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5 pt-[3.75rem] pb-20 md:pt-0 flex md:flex-col-reverse gap-[3.125rem] md:gap-[0.75rem] items-center">
+          {/* Texts */}
+          <div className="flex gap-[0.9375rem] flex-col">
+            <h2 className="text-[3rem] md:text-[2.25rem] ">
+              Trade Dividends Rewarding our comunity
+            </h2>
+            <p className="text-[1.125rem] ">
+              This institutional partnership enables the launch of our
+              innovative TradeDividends program:
+            </p>
+            <ul
+              className={`${openSans.className} text-[#8CA0B3] text-[1rem] list-disc pl-6`}
+            >
+              <li>Exclusive USDC rewards for $EAI stakers</li>
+              <li>Direct benefit from institutional trading success</li>
+              <li>
+                Sustainable yield generation backed by hedge fund performance
+              </li>
+            </ul>
+          </div>
+
+          {/* Image */}
+          <div className="relative aspect-square w-[31.375rem] md:w-full md:aspect-dividends">
+            <ContainImage
+              src="/pngs/desktopDividends.png"
+              mobileImage="/pngs/mobileDividends.png"
+              alt="Trade Dividends Image"
+            />
           </div>
         </section>
       </main>
