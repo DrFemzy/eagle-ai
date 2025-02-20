@@ -233,6 +233,11 @@ export default function Home() {
         <ContainImage src="/svgs/logo.svg" alt="Floating Logo" />
       </div>
 
+      {/* Absolute logo in the BG */}
+      <div className="absolute right-0 left-0 bottom-0 -z-10 opacity-60 hidden md:block h-[66rem]">
+        <CoverImage src="/pngs/footerLine.png" alt="Footer Lines" />
+      </div>
+
       <Footer />
     </div>
   );
