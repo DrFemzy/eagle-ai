@@ -75,8 +75,8 @@ function WaitlistForm() {
       />
 
       <div className="flex justify-between">
-        <div></div>
-        <PryBtn text="Register your interest now" />
+        <div className="md:hidden"></div>
+        <PryBtn mobileFullWidth text="Register your interest now" />
       </div>
     </form>
   );
