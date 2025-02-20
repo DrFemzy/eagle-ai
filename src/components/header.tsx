@@ -47,7 +47,7 @@ function Header() {
   };
 
   return (
-    <header className="fixed top-0 w-full px-[19.375rem] 3xl:px-10 py-[1.625rem] bg-[#131B2F]">
+    <header className="fixed top-0 w-full px-[19.375rem] 3xl:px-10 sm:px-5 py-[1.625rem] bg-[#131B2F] z-10">
       <nav className="relative flex justify-between items-center 3xl:justify-center 3xl:gap-10 xl:justify-between">
         <Brand />
 
@@ -80,6 +80,7 @@ function Header() {
           <ContainImage src="/svgs/menu.svg" alt="Menu" />
         </div>
 
+        {/* Menu Sidebar */}
         <div
           onClick={toggleSidebar}
           className={cn(
@@ -88,10 +89,9 @@ function Header() {
           )}
         >
           <div className="flex items-center justify-between gap-10">
+            <Brand />
 
-          <Brand />
-
-          <X className="text-[#14ffff]" />
+            <X className="text-[#14ffff]" />
           </div>
 
           {/* Nav Items */}
@@ -109,7 +109,7 @@ function Header() {
                 </Link>
               </li>
             ))}
-            <PryBtn text="Launch App" />
+            <PryBtn text="Launch App" fullWidth />
           </ul>
         </div>
       </nav>

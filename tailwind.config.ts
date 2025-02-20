@@ -19,9 +19,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        eagleHighlight: "var(--eagleHighlight)",
       },
       backgroundImage: {
         pryLinearGradient: "var(--pryLinearGradient)",
+        heroBg: "url(/pngs/heroBg.png)",
       },
       aspectRatio: {
         "4/3": "4 / 3",
@@ -30,6 +32,8 @@ export default {
         square: "1 / 1",
         logo: "2.39631 / 2.1875",
         textLogo: "11.837 / 1.21294",
+        desktopPhone: "26.61969 / 51.09381",
+        mobilePhone: "21.875 / 43.375"
       },
     },
   },

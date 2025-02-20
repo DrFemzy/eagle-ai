@@ -5,6 +5,7 @@
 :root {
   --background: #000614;
   --foreground: #ffffff;
+  --eagleHighlight: rgba(0, 246, 255, 0.87);
   --pryLinearGradient: linear-gradient(115deg, #1870f6 62.27%, #32fefe 95.1%);
 }
 
@@ -22,4 +23,22 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbar */
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #32fefe;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #1870f6;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #1870f6;
 }
