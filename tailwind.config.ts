@@ -33,7 +33,8 @@ export default {
         logo: "2.39631 / 2.1875",
         textLogo: "11.837 / 1.21294",
         desktopPhone: "26.61969 / 51.09381",
-        mobilePhone: "21.875 / 43.375"
+        mobilePhone: "21.875 / 43.375",
+        era: "21.875 / 16.95041"
       },
     },
   },

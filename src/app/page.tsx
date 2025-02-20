@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "@/components/header";
-import { ContainImage } from "@/components/myImage";
+import { ContainImage, CoverImage } from "@/components/myImage";
 import PryBtn from "@/components/pryBtn";
 import Image from "next/image";
 import Link from "next/link";
@@ -70,7 +70,43 @@ export default function Home() {
         </section>
 
         {/* New Era section */}
-        <section className="px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5 pt-[3.75rem] pb-20 md:pt-0"></section>
+        <section className="px-[19.375rem] 3xl:px-[15rem] 2xl:px-[10rem] xl:px-10 sm:px-5 pt-[3.75rem] pb-20 md:pt-0 flex md:flex-col gap-[3.125rem] md:gap-[0.55rem] items-center">
+          <div className="relative aspect-square w-[31.375rem] md:w-full md:aspect-era">
+            <ContainImage
+              src="/pngs/desktopEra.png"
+              mobileImage="/pngs/mobileEra.png"
+              alt="New Era Image"
+            />
+          </div>
+
+          {/* Texts */}
+          <div className="flex gap-[0.9375rem] flex-col">
+            <h2 className="text-[3rem] md:text-[2.25rem] ">A new era in crypto investment</h2>
+            <p className="text-[1.125rem] ">
+              Our partnership represents a milestone in institutional crypto
+              adoption, featuring:
+            </p>
+            <ul className="text-[#8CA0B3] text-[1rem] list-disc pl-6">
+              <li>
+                Exclusive licensing of Eagle AI Labs' proprietary BTC price
+                prediction algorithms
+              </li>
+              <li>
+                Significant equity stake in a fully regulated U.S. <br /> hedge
+                fund
+              </li>
+              <li>
+                Management team with proven track record of managing billions in
+                AUM
+              </li>
+              <li>Full compliance with U.S. regulatory requirements</li>
+              <li>
+                Strategic timing aligned with anticipated favourable U.S.
+                regulatory environment
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </div>
