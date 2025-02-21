@@ -20,24 +20,22 @@ export const CoverImage = ({
   <>
     <Image
       src={src}
-      placeholder={placeholder ? "blur" : undefined}
       blurDataURL={placeholder ? "/assets/pngs/placeholder.png" : undefined}
       alt={alt}
       fill
       style={{ objectFit: "cover", objectPosition: position }}
       priority
-      className={cn(`${className}`, mobileImage && "md:hidden")}
+      className={cn(`${className}`, mobileImage && "max-md:hidden")}
     />
 
     <Image
       src={mobileImage ?? src}
-      placeholder={placeholder ? "blur" : undefined}
       blurDataURL={placeholder ? "/assets/pngs/placeholder.png" : undefined}
       alt={alt}
       fill
       style={{ objectFit: "cover", objectPosition: position }}
       priority
-      className={cn(`${className}`, mobileImage && "hidden md:inline-block")}
+      className={cn(`${className}`, mobileImage && "hidden max-md:inline-block")}
     />
   </>
 );
@@ -57,23 +55,21 @@ export const ContainImage = ({
   <>
     <Image
       src={src}
-      placeholder={placeholder ? "blur" : undefined}
       blurDataURL={placeholder ? "/assets/pngs/placeholder.png" : undefined}
       alt={alt}
       fill
       style={{ objectFit: "contain" }}
       priority
-      className={cn(mobileImage && "md:hidden")}
+      className={cn(mobileImage && "max-md:hidden")}
     />
     <Image
       src={mobileImage ?? src}
-      placeholder={placeholder ? "blur" : undefined}
       blurDataURL={placeholder ? "/assets/pngs/placeholder.png" : undefined}
       alt={alt}
       fill
       style={{ objectFit: "contain" }}
       priority
-      className={cn(mobileImage && "hidden md:inline-block")}
+      className={cn(mobileImage && "hidden max-md:inline-block")}
     />
   </>
 );

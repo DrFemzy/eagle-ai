@@ -12,6 +12,7 @@ function WaitlistForm() {
     email: string;
     telegram: string;
   }>({ firstName: "", lastName: "", email: "", telegram: "" });
+  const [submitting, setSubmitting] = useState(false);
 
   const handleFormDetailsChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormDetails((prev) => ({
@@ -22,7 +23,18 @@ function WaitlistForm() {
 
   const handleSubmitWaitlistForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(formDetails);
+    console.log({ formDetails });
+
+    if (
+      !formDetails.firstName ||
+      !formDetails.email ||
+      !formDetails.lastName ||
+      !formDetails.telegram
+    ) {
+      toast.warning("All fields are required");
+      return;
+    }
+    setSubmitting(true);
 
     const headers = {
       "Content-Type": "application/json",
@@ -37,6 +49,9 @@ function WaitlistForm() {
       .catch((err) => {
         console.log(err);
         toast.error(err.response.data.message || "Error Submitting");
+      })
+      .finally(() => {
+        setSubmitting(false);
       });
   };
 
@@ -75,8 +90,18 @@ function WaitlistForm() {
       />
 
       <div className="flex justify-between">
-        <div className="md:hidden"></div>
-        <PryBtn mobileFullWidth text="Register your interest now" />
+        <div className="max-md:hidden"></div>
+        <PryBtn
+          disable={
+            !formDetails.firstName ||
+            !formDetails.lastName ||
+            !formDetails.email ||
+            !formDetails.telegram
+          }
+          mobileFullWidth
+          loading={submitting}
+          text="Register your interest now"
+        />
       </div>
     </form>
   );

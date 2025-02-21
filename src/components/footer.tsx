@@ -4,7 +4,7 @@ import { ContainImage } from "./myImage";
 
 function Footer() {
   return (
-    <footer className="flex justify-between items-center sm:flex-col gap-4 py-[1.88rem] mx-[19.375rem] 3xl:mx-[15rem] 2xl:mx-[10rem] xl:mx-10 sm:mx-5 border-t border-white/20 ">
+    <footer className="flex justify-between items-center max-sm:flex-col gap-4 py-[1.88rem] mx-[19.375rem] max-3xl:mx-[15rem] max-2xl:mx-[10rem] max-xl:mx-10 max-sm:mx-5 border-t border-white/20 ">
       <Brand showTextLogo />
 
       <p className="text-[1rem] text-[#8CA0B3] text-center">

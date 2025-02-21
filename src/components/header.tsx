@@ -61,21 +61,21 @@ function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full px-[19.375rem] 3xl:px-10 sm:px-5 py-[1.625rem] bg-[#131B2F] md:bg-transparent z-10 transition-all duration-200",
-        scrolled && "md:bg-[#131B2F]"
+        "fixed top-0 w-full px-[19.375rem] max-3xl:px-10 max-sm:px-5 py-[1.625rem] bg-[#131B2F] max-md:bg-transparent z-10 transition-all duration-200",
+        scrolled && "max-md:bg-[#131B2F]"
       )}
     >
-      <nav className="relative flex justify-between items-center 3xl:justify-center 3xl:gap-10 xl:justify-between">
+      <nav className="relative flex justify-between items-center max-3xl:justify-center max-3xl:gap-10 max-xl:justify-between">
         <Brand />
 
         {/* Nav Items */}
-        <ul className="flex gap-10 3xl:gap-6 xl:hidden items-center">
+        <ul className="flex gap-10 max-3xl:gap-6 max-xl:hidden items-center">
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
                 href={item.href}
                 className={cn(
-                  "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base 3xl:text-sm font-semibold 3xl:font-medium leading-normal",
+                  "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base max-3xl:text-sm font-semibold max-3xl:font-medium leading-normal",
                   item.important && "text-[#E3E8F3]"
                 )}
               >
@@ -86,13 +86,13 @@ function Header() {
         </ul>
 
         {/* Nav Button */}
-        <div className="xl:hidden">
+        <div className="max-xl:hidden">
           <PryBtn text="Launch App" />
         </div>
 
         <div
           onClick={toggleSidebar}
-          className="hidden xl:block relative aspect-square w-[2rem]"
+          className="hidden max-xl:block relative aspect-square w-[2rem]"
         >
           <ContainImage src="/svgs/menu.svg" alt="Menu" />
         </div>
@@ -112,13 +112,13 @@ function Header() {
           </div>
 
           {/* Nav Items */}
-          <ul className="flex flex-col gap-10 3xl:gap-6">
+          <ul className="flex flex-col gap-10 max-3xl:gap-6">
             {navItems.map((item) => (
               <li key={item.name}>
                 <Link
                   href={item.href}
                   className={cn(
-                    "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base 3xl:text-sm font-semibold 3xl:font-medium leading-normal",
+                    "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base max-3xl:text-sm font-semibold max-3xl:font-medium leading-normal",
                     item.important && "text-[#E3E8F3]"
                   )}
                 >

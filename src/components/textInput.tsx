@@ -19,7 +19,7 @@ function TextInput({
       type={type}
       name={name}
       placeholder={placeholder}
-      className={`${openSans.className} px-5 py-5 text-[1rem] text-[#ABAEB4] rounded-[1.5625rem] inputBg focus:outline-none focus:border-none`}
+      className={`${openSans.className} px-5 py-5 text-[1rem] text-[#ABAEB4] rounded-[1.5625rem] inputBg focus:outline-hidden focus:border-none`}
       value={value}
       onChange={onchange}
     />
