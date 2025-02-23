@@ -22,7 +22,7 @@ function PryBtn({
       className={cn(
         `${openSans.className} cursor-pointer bg-[linear-gradient(115deg,#1870f6_62.27%,#32fefe_95.1%)] text-white px-[1.875rem] py-[0.72rem] rounded-full text-[1rem] font-normal leading-normal self-start`,
         fullWidth && "self-auto",
-        mobileFullWidth && "md:w-full",
+        mobileFullWidth && "max-md:w-full",
         disable && "cursor-not-allowed"
       )}
     >
