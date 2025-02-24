@@ -61,15 +61,15 @@ function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full px-[19.375rem] max-3xl:px-10 max-sm:px-5 py-[1.625rem] bg-[#131B2F] max-md:bg-transparent z-10 transition-all duration-200",
+        "fixed top-0 w-full px-[19.375rem] max-3xl:px-[15rem] max-2xl:px-[10rem] max-xl:px-10 max-sm:px-5 py-[1.625rem] bg-[#131B2F] max-md:bg-transparent z-10 transition-all duration-200",
         scrolled && "max-md:bg-[#131B2F]"
       )}
     >
-      <nav className="relative flex justify-between items-center max-3xl:justify-center max-3xl:gap-10 max-xl:justify-between">
+      <nav className="relative flex justify-between items-center max-2xl:justify-between max-3xl:gap-10 max-2xl:gap-8 max-xl:justify-between">
         <Brand />
 
         {/* Nav Items */}
-        <ul className="flex gap-10 max-3xl:gap-6 max-xl:hidden items-center">
+        <ul className="flex gap-10 max-3xl:gap-6 max-2xl:gap-4 max-xl:hidden items-center">
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
