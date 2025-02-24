@@ -99,7 +99,7 @@ function Header() {
 
         {/* Menu Sidebar */}
         <div
-          onClick={toggleSidebar}
+          // onClick={toggleSidebar}
           className={cn(
             "fixed top-0 left-0 bottom-0 w-full bg-background backdrop-blur-[20px] transition-all duration-200 translate-x-[-100%] flex flex-col gap-10 z-50 px-8 py-5",
             openSidebar && "translate-x-0"
@@ -108,7 +108,7 @@ function Header() {
           <div className="flex items-center justify-between gap-10">
             <Brand />
 
-            <X className="text-[#14ffff]" />
+            <X onClick={toggleSidebar} className="text-[#14ffff]" />
           </div>
 
           {/* Nav Items */}
@@ -118,7 +118,7 @@ function Header() {
                 <Link
                   href={item.href}
                   className={cn(
-                    "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base max-3xl:text-sm font-semibold max-3xl:font-medium leading-normal",
+                    "text-center text-[#e3e7f3]/50 hover:text-[#e3e7f3]/70 transition-all duration-200 text-base max-3xl:text-sm font-semibold max-3xl:font-medium leading-normal  ",
                     item.important && "text-[#E3E8F3]"
                   )}
                 >

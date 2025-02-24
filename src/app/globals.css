@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @config '../../tailwind.config.ts';
 
@@ -41,7 +41,7 @@
   background: var(
     --gradient-neon-blue,
     linear-gradient(132deg, #0207f7 0%, #14ffff 68.66%)
-  ) ;
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -73,4 +73,10 @@ body {
 
 *::-webkit-scrollbar-thumb:hover {
   background: #1870f6;
+}
+
+/* Prevent scroll-jumping during animations */
+[class*="will-change"] {
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
