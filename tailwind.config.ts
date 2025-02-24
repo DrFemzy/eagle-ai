@@ -9,7 +9,7 @@ export default {
   theme: {
     screens: {
       "3xl": { max: "1900px" },
-      "2xl": { max: "1440px" },
+      "2xl": { max: "1500px" },
       xl: { max: "1280px" },
       lg: { max: "1024px" },
       md: { max: "768px" },
