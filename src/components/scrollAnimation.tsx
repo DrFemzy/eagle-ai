@@ -43,7 +43,7 @@ const ScrollAnimation = forwardRef<HTMLDivElement, AnimationProps>(
           trigger: localRef.current,
           start: "top 85%",
           scrub: scrub ? 1 : undefined,
-          toggleActions: "play none none none",
+          toggleActions: "play none none reverse",
         },
       });
     }, [type, delay, duration]);
