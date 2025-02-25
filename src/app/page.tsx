@@ -236,7 +236,7 @@ export default function Home() {
         {/* Waitlist Section */}
         <section className="px-7xl max-3xl:px-6xl max-2xl:px-5xl max-xl:px-10 max-sm:px-5 pt-[3.75rem] pb-20 max-md:pt-0 flex flex-col gap-md ">
           <ScrollAnimation type="slideRight">
-            <h3 className="text-5xl max-md:text-4xl text-[#E3E8F3]">
+            <h3 className="text-[3rem] max-md:text-[2.25rem] text-[#E3E8F3]">
               Limited Availability - Register now to join wait List
             </h3>
           </ScrollAnimation>
@@ -251,11 +251,11 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-col gap-5 w-full">
-                    <h4 className="text-2xl max-md:text-lg max-md:text-center">
+                    <h4 className="text-[1.5rem] max-md:text-[1.125rem] max-md:text-center">
                       Limited Access Available
                     </h4>
                     <div
-                      className={`${openSans.className} text-base text-[#8CA0B3] flex flex-col gap-4 `}
+                      className={`${openSans.className} text-[1rem] text-[#8CA0B3] flex flex-col gap-4 `}
                     >
                       <p>
                         Be among the first to access institutional-grade crypto
