@@ -20,7 +20,7 @@ function PryBtn({
     <button
       disabled={disable}
       className={cn(
-        `${openSans.className} cursor-pointer bg-[linear-gradient(115deg,#1870f6_62.27%,#32fefe_95.1%)] text-white px-[1.875rem] py-[0.72rem] rounded-full text-[1rem] font-normal leading-normal self-start`,
+        `${openSans.className} cursor-pointer bg-[linear-gradient(145deg,#1870f6_62.27%,#32fefe_95.1%)] text-white px-md py-[0.72rem] rounded-full text-base font-normal leading-normal self-start`,
         fullWidth && "self-auto",
         mobileFullWidth && "max-md:w-full",
         disable && "cursor-not-allowed"

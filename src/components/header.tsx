@@ -61,7 +61,7 @@ function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 w-full px-[19.375rem] max-3xl:px-[15rem] max-2xl:px-[10rem] max-xl:px-10 max-sm:px-5 py-[1.625rem] bg-[#131B2F] max-md:bg-transparent z-10 transition-all duration-200",
+        "fixed top-0 w-full px-7xl max-3xl:px-6xl max-2xl:px-5xl max-xl:px-10 max-sm:px-5 py-sm bg-[#131B2F] max-md:bg-transparent z-10 transition-all duration-200",
         scrolled && "max-md:bg-[#131B2F]"
       )}
     >
@@ -92,7 +92,7 @@ function Header() {
 
         <div
           onClick={toggleSidebar}
-          className="hidden max-xl:block relative aspect-square w-[2rem]"
+          className="hidden max-xl:block relative aspect-square w-8"
         >
           <ContainImage src="/svgs/menu.svg" alt="Menu" />
         </div>
