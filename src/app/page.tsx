@@ -108,7 +108,7 @@ export default function Home() {
               style={{ opacity: 0, visibility: "hidden" }}
             >
               <div className="flex flex-col gap-[.75rem]">
-                <h1 className="textGradientNeonBlue text-7xl max-lg:text-5xl max-lg:leading-[3.6rem]">
+                <h1 className="textGradientNeonBlue text-[4.5rem] max-lg:text-5xl max-lg:leading-[3.6rem]">
                   Pioneering the Future of Digital Asset Investment
                 </h1>
                 <p className="text-lg text-white">
@@ -161,7 +161,7 @@ export default function Home() {
           {/* Texts */}
           <div className="flex gap-[0.9375rem] flex-col slide-left">
             <ScrollAnimation type="slideLeft">
-              <h2 className="text-5xl max-md:text-4xl ">
+              <h2 className="text-[3rem] max-md:text-4xl ">
                 A new era in crypto investment
               </h2>
             </ScrollAnimation>
@@ -202,7 +202,7 @@ export default function Home() {
           {/* Texts */}
           <ScrollAnimation type="slideRight">
             <div className="flex gap-[0.9375rem] flex-col">
-              <h2 className="text-5xl max-md:text-4xl ">
+              <h2 className="text-[3rem] max-md:text-4xl ">
                 Trade Dividends Rewarding our comunity
               </h2>
               <p className="text-lg ">
@@ -251,7 +251,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-col gap-5 w-full">
-                    <h4 className="text-[1.5rem] max-md:text-lg max-md:text-center">
+                    <h4 className="text-2xl max-md:text-lg max-md:text-center">
                       Limited Access Available
                     </h4>
                     <div
@@ -282,7 +282,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex flex-col gap-5 w-full">
-                    <h4 className="text-[1.5rem] max-md:text-lg max-md:text-center">
+                    <h4 className="text-2xl max-md:text-lg max-md:text-center">
                       Benefits of signing up early
                     </h4>
                     <div
